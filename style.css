@@ -1,170 +1,231 @@
 @charset "utf-8";
 /* CSS Document */
-	   
-@import url(https://fonts.googleapis.com/css?family=Poppins:300,700);
-	   
-	   body {
-          margin: 0;
-          padding: 0;
-          font-family: "Poppins";
-          // text-rendering: optimizeLegibility !important;
-          // -webkit-font-smoothing: antialiased;
-		  user-select: none; /* supported by Chrome and Opera */
-		  -webkit-user-select: none; /* Safari */
-		  -khtml-user-select: none; /* Konqueror HTML */
-		  -moz-user-select: none; /* Firefox */
-		  -ms-user-select: none; /* Internet Explorer/Edge */
-        }
-        .container {
-          height: 100%;
-          width: 100%;
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-        }
-        .left {
-          height: 100vh;
-          flex: 50%;
-          display: flex;
-          align-items: center;
-          flex-direction: column;
-          justify-content: space-between;
-          background: #15172e;
-        }
-        .leftContent {
-          margin-top: 260px;
-          display: flex;
-          align-items: center;
-          flex-direction: column;
-        }
+
+/* Google Fonts API */
+@import url(https://fonts.googleapis.com/css?family=Crimson+Text:400italic); 
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,700);
+
+html, body {
+	margin:0;
+	padding:0;
+	user-select: none; /* supported by Chrome and Opera */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */	
+}
+
+#contact {
+	display:block;
+	position:absolute;
+	width:100%;
+	background-color:#222;
+}
+
+
+#top {
+	display:block;
+	position:absolute;
+	width:100%;
+}
+
+/*** Contact ***/
+h4 {
+	font-family: 'roboto', san-serif;
+	font-weight: 700;
+	font-size:13px;
+	color:#f5f7f9;
+	text-align:left;
+	padding-top:10px;
+	padding-bottom:10px;
+	margin:0 460px;
+	margin-top:0px;
+	margin-bottom:0px;
+	a:link: color
+}
+
+/*** Text ***/
+header {
+	font-family: 'Crimson Text', serif;
+	font-style: italic;
+	font-weight: 400;
+	color:#444555;
+	text-align:left;
+	background-color:#fff;
+	padding-top:50px;
+	padding-bottom:50px;
+	border-bottom: 1px solid #ddd;
+}
+
+body {
+	font-family:'Roboto', Arial, san-serif;
+	color:#444555;
+	text-align:left;
+	background:#f5f7f9;
+}
+
+/*** Links ***/
+a, a.one:link, a.one:visited {
+	color:#f5f7f9;
+	text-decoration:none;
+}
+
+a, a:link, a:visited {
+	color:#5A5B69;
+	text-decoration:none;
+}
+
+a:hover {
+	border-bottom: 1px solid #339966;	
+}
+
+
+/*** Top ***/
+h1 {
+	font-family: 'Crimson Text', serif;
+	font-style: italic;
+	font-weight: 400;
+	margin:0 460px;
+	padding:0;
+	font-size:50px;
+}
+
+span.name {color:#339966}
+
+h2 {
+	font-family: 'Crimson Text', serif;
+	font-style: italic;
+	font-weight: 400;
+	margin:0 460px;
+	margin-top:15px;
+	margin-bottom:0px;
+	padding:0;
+	font-size:24px;	
+}
+
+/*** Bottom ***/
+#bottom {
+	padding-top: 0px;
+	margin-top: 50px;
+	margin-bottom: 100px;
+}
+
+h3 {
+	font-size:24px;
+	margin:0 460px;
+	margin-top:50px;
+	margin-bottom:0px;
+	text-transform: uppercase;
+}
+
+p {
+	font-size:28px;
+	line-height: 42px;
+	margin:0 460px;
+	margin-top:12px;
+	margin-bottom:0px;
+}
+
+/* *=*=*=*=*=*=*=*=*=* Small screen *=*=*=*=*=*=*=*=*=* */
 		
-        @media only screen and (max-width: 600px) {
-          .leftContent {
-            margin-top: 150px;
-          }
-		  .leftContent .appDescription {
-          font-size: 20px;
-		  }
-        }
-        .right {
-          height: 100vh;
-          flex: 50%;
-          background-image: url(static/confettipattern.png);
-          background-repeat: repeat;
-          display: flex;
-          align-items: center;
-          flex-direction: column;
-        }
-		
-        @media only screen and (max-width: 600px) {
-          .right {
-            display: none;
-          }
-        }
-        .rightContent {
-        margin-top:300px;
-        background-color:#15172e;
-        max-width:350px;
-        max-height:350px;
-        width:100%;
-        height:100%;
-        border: 6px solid #f4294f;
-        box-shadow: -4px 4px 10px rgba(0, 0, 0, .15);
-        border-radius:50%;
-        padding:10px;
-        }
+@media only screen and (max-width: 1600px) {
 
-        .appName {
-          text-align: center;
-          margin: 0;
-          padding: 0;
-          border: 0;
-          font: inherit;
-          font-size: 40px;
-          font-weight: 700;
-          color: #fff59c;
-          line-height: 1.2;
-          letter-spacing: 0;
-          margin-bottom: 20px;
-        }
-        .appDescription {
-          text-align: center;
-		      max-width: 800px;
-          margin: 0;
-          padding: 0;
-          border: 0;
-          font: inherit;
-          vertical-align: baseline;
-          font-size: 30px;
-          font-weight: 300;
-          color: #f5f7f9;
-          line-height: 1.4;
-          letter-spacing: 2px;
-          margin-bottom: 15px;
-        }
-        .getNotified {
-          text-align: center;
-          padding: 0;
-          border: 0;
-          font: inherit;
-          vertical-align: baseline;
-          font-size: 16px;
-          font-weight: 300;
-          color: rgba(255, 255, 255, 0.8);
-          line-height: 1.6;
-          margin: 0 auto;
-        }
-		.emailButton {
-          border-width: 2px;
-		      border-style: solid;
-		      border-color: #f4294f;
-          border-radius: 10px;
-          border-radius: 10px;
-          padding: 40px 40px 40px 40px;
-          background: #15172e;
-          font-family: 'poppins', san-serif;
-          font-weight: 300;
-          font-size: 14px;
-          letter-spacing: .1em;
-          color: #fff59c;
-          cursor: pointer;
-          outline: none;
-          transition: 500ms;
-          margin: 40px;
-        }
+/*** Contact ***/
+h4 {
+	margin:0 100px;
+}
 
-		a.emailButton:hover  {
-          text-decoration: underline;
-        }
+h1 {
+	margin:0 100px;
+	font-weight: 400italic;
+	padding:0;
+	font-size:40px;
+}
 
-		.blogButton {
-          border-width: 2px;
-		      border-style: solid;
-		      border-color: #f4294f;
-          border-radius: 10px;
-          padding: 40px 40px 40px 40px;
-          background: #15172e;
-          font-family: 'poppins', san-serif;
-          font-weight: 300;
-          font-size: 14px;
-          letter-spacing: .1em;
-          color: #fff59c;
-          cursor: pointer;
-          outline: none;
-          transition: 500ms;
-        }
-        .footer {
-          list-style: none;
-          list-style-type: none;
-          letter-spacing: 0;
-          box-sizing: border-box;
-          padding: 0;
-          border: 0;
-          font: inherit;
-          vertical-align: baseline;
-          font-size: 12px;
-          font-weight: 400;
-          color: rgba(255, 255, 255, 0.8);
-          line-height: 1.6;
-          margin: 10px;
-        }
+span.name {color:#339966}
+
+h2 {
+	margin:0 100px;
+	margin-top:15px;
+	margin-bottom:0px;
+	padding:0;
+	font-size:22px;	
+}
+
+/*** Bottom ***/
+#bottom {
+	padding-top: 0px;
+	margin-top: 40px;
+	margin-bottom: 100px;
+}
+
+h3 {
+	font-size:24px;
+	margin:0 100px;
+	margin-top:40px;
+	margin-bottom:0px;
+	text-transform: uppercase;
+}
+
+p {
+	font-size:26px;
+	line-height: 32px;
+	margin:0 100px;
+	margin-top:12px;
+	margin-bottom:22px;
+}
+
+
+
+}
+
+/* *=*=*=*=*=*=*=*=*=* Phone *=*=*=*=*=*=*=*=*=* */
+
+@media only screen  and (min-device-width : 320px)  and (max-device-width : 568px) {
+
+/*** Contact ***/
+h4 {
+	margin:0 60px;
+}
+
+h1 {
+	margin:0 60px;
+	font-weight: 400italic;
+	padding:0;
+	font-size:38px;
+}
+
+span.name {color:#339966}
+
+h2 {
+	margin:0 60px;
+	margin-top:15px;
+	margin-bottom:0px;
+	padding:0;
+	font-size:22px;	
+}
+
+/*** Bottom ***/
+#bottom {
+	padding-top: 0px;
+	margin-top: 40px;
+	margin-bottom: 100px;
+}
+
+h3 {
+	font-size:24px;
+	margin:0 60px;
+	margin-top:40px;
+	margin-bottom:0px;
+	text-transform: uppercase;
+}
+
+p {
+	font-size:24px;
+	line-height: 24px;
+	margin:0 60px;
+	margin-top:12px;
+	margin-bottom:26px;
+}
+
+}
